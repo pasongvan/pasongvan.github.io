@@ -8,27 +8,75 @@
 <body>
 
   <div class="left-section">
-    <span class="main-text">
-      Welcome to P's World!
-    </span>
-    <span class="sub-text">
-      Nice to meet you! I’m P, an engineer at LG CNS, the world's leading IT company. My full name is Pi Seung-bin, and although some people mistakenly call me "Pie" because of my family name "Pi," I assure you I'm not a dessert. Just call me "P."
-    </span>
+
+    <!-- Welcome -->
+    <div id="welcome" style="display: block">
+      <span class="main-text">
+        Welcome to P's World!
+      </span>
+      <span class="sub-text">
+        Nice to meet you! I’m P, an engineer at LG CNS, the world's leading IT company. My full name is Pi Seung-bin, and although some people mistakenly call me "Pie" because of my family name "Pi," I assure you I'm not a dessert. Just call me "P."
+      </span>
+    </div>
+
+    <!-- Who is P -->
+    <div id="whois" style="display: none">
+      <span class="main-text">
+        Who is P?
+      </span>
+
+      <!-- Work Section -->
+      <div>
+        <div class="section-title">
+          <span>work</span>
+        </div>
+        <hr>
+          <!-- 기간 -->
+        <div>
+          <span>2025.1.~</span>
+        </div>
+        <!-- 내용 -->
+        <div>
+          <span>LG CNS DX Engineer</span>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- P's Love -->
+    <div id="love" style="display: none">
+      P's Love
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" style="display: none">
+      <span class="main-text">
+        Contact P!
+      </span>
+      <div class="contact-list">
+        <img src="./assets/image/mail-icon.png" class="icon">
+        <span>pasongvaan@gmail.com</span>
+      </div>
+      <div class="contact-list">
+        <img src="./assets/image/github-icon.png" class="icon">
+        <a href="https://github.com/pasongvan" target="_blank" style="color: white;">github.com/pasongvan</a>
+      </div>
+    </div>
   </div>
 
   <div class="right-section">
     
     <main class="container">
-      <div class="item">
+      <div class="item" id="welcome-button">
         <span>Welcome</span>
       </div>
-      <div class="item">
+      <div class="item" id="whois-button">
         <span>Who is P?</span>
       </div>
-      <div class="item">
+      <div class="item" id="love-button">
         <span>P's Love</span>
       </div>
-      <div class="item">
+      <div class="item" id="contact-button">
         <span>Contact P</span>
       </div>
       
@@ -36,7 +84,50 @@
   </div>
     
   <script>
-    let welcome = true;
+    // 버튼과 요소 변수화
+    const welcomeBtn = document.getElementById('welcome-button')
+    const welcomeContent = document.getElementById('welcome')
+
+    const whoisBtn = document.getElementById('whois-button')
+    const whoisContent = document.getElementById('whois')
+
+    const loveBtn = document.getElementById('love-button')
+    const loveContent = document.getElementById('love')
+
+    const contactBtn = document.getElementById('contact-button')
+    const contactContent = document.getElementById('contact')
+
+    // 웰컴 버튼 제어
+    welcomeBtn.addEventListener('click', () => {
+      welcomeContent.style.display = 'block'
+      whoisContent.style.display = 'none'
+      loveContent.style.display = 'none'
+      contactContent.style.display = 'none'
+    })
+
+    // who is P 버튼 제어
+    whoisBtn.addEventListener('click', () => {
+      welcomeContent.style.display = 'none'
+      whoisContent.style.display = 'block'
+      loveContent.style.display = 'none'
+      contactContent.style.display = 'none'
+    })
+
+    // P's Love 버튼 제어
+    loveBtn.addEventListener('click', () => {
+      welcomeContent.style.display = 'none'
+      whoisContent.style.display = 'none'
+      loveContent.style.display = 'block'
+      contactContent.style.display = 'none'
+    })
+
+    // Contact 버튼 제어
+    contactBtn.addEventListener('click', () => {
+      welcomeContent.style.display = 'none'
+      whoisContent.style.display = 'none'
+      loveContent.style.display = 'none'
+      contactContent.style.display = 'block'
+    })
   </script>
 </body>
 </html>

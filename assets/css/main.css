@@ -69,3 +69,22 @@ span {
     font-size: 1.2rem;
 	color: rgb(224, 222, 222);
 }
+
+/* who is P */
+.section-title {
+	font-size: 2rem;
+}
+
+
+/* contact */
+.icon {
+	width: 40px;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+}
